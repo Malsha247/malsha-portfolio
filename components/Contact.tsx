@@ -13,15 +13,15 @@ export default function Contact() {
       </p>
 
       <div className="flex justify-center gap-6 mt-6">
-        <a href="mailto:your@email.com">
+        <a href="mailto:malsha.prebhasara2001@gmail.com">
           Email
         </a>
 
-        <a href="#">
+        <a href="https://www.linkedin.com/in/malsha-prabhasara">
           LinkedIn
         </a>
 
-        <a href="#">
+        <a href="https://github.com/malsha247">
           GitHub
         </a>
       </div>
