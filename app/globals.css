@@ -1553,6 +1553,274 @@ section h2 {
   font-size: 13px;
 }
 
+/* ==================================================
+   CONTACT - TABLET
+================================================== */
+
+@media (max-width: 850px) {
+
+  .contact-section {
+    padding: 90px 24px;
+  }
+
+  .contact-container {
+    width: 100%;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 35px;
+
+    border-radius: 20px;
+  }
+
+  .contact-card-left {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .contact-card-left h3 {
+    max-width: 600px;
+
+    font-size: 27px;
+  }
+
+  .contact-card-left p {
+    max-width: 600px;
+  }
+
+  .contact-main-button {
+    margin: 0 auto;
+  }
+
+  .contact-links {
+    width: 100%;
+  }
+}
+
+
+/* ==================================================
+   CONTACT - MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding: 75px 16px;
+  }
+
+  .contact-heading {
+    margin-bottom: 35px;
+  }
+
+  .contact-heading > span {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .contact-heading h2 {
+    margin-bottom: 12px;
+
+    font-size: 31px;
+  }
+
+  .contact-heading p {
+    padding: 0 5px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* Main Card */
+
+  .contact-card {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 26px 16px;
+
+    border-radius: 18px;
+  }
+
+
+  /* Left content */
+
+  .contact-card-left {
+    width: 100%;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .contact-small-text {
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .contact-card-left h3 {
+    width: 100%;
+
+    margin-bottom: 14px;
+
+    font-size: 23px;
+    line-height: 1.35;
+  }
+
+  .contact-card-left p {
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* Main Email Button */
+
+  .contact-main-button {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    margin: 0;
+
+    font-size: 14px;
+  }
+
+
+  /* Contact links */
+
+  .contact-links {
+    width: 100%;
+
+    gap: 12px;
+  }
+
+  .contact-link-card {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border-radius: 12px;
+  }
+
+  .contact-link-card:hover {
+    transform: translateY(-2px);
+  }
+
+
+  /* Contact icon */
+
+  .contact-icon {
+    flex: 0 0 42px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 18px;
+  }
+
+
+  /* Text area */
+
+  .contact-link-card > div:last-child {
+    min-width: 0;
+
+    flex: 1;
+
+    text-align: left;
+  }
+
+  .contact-link-card span {
+    margin-bottom: 2px;
+
+    font-size: 14px;
+  }
+
+  .contact-link-card p {
+    max-width: 100%;
+
+    margin: 0;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+
+/* ==================================================
+   CONTACT - SMALL MOBILE
+================================================== */
+
+@media (max-width: 400px) {
+
+  .contact-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .contact-card {
+    padding: 22px 13px;
+  }
+
+  .contact-heading h2 {
+    font-size: 28px;
+  }
+
+  .contact-card-left h3 {
+    font-size: 21px;
+  }
+
+  .contact-card-left p {
+    font-size: 13px;
+  }
+
+  .contact-link-card {
+    gap: 10px;
+
+    padding: 12px 10px;
+  }
+
+  .contact-icon {
+    flex-basis: 38px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 16px;
+  }
+
+  .contact-link-card span {
+    font-size: 13px;
+  }
+
+  .contact-link-card p {
+    font-size: 11px;
+  }
+}
 
 /* ==================================================
    CONTACT ANIMATION
