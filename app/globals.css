@@ -2589,4 +2589,592 @@ section h2 {
 
     scroll-behavior: auto !important;
   }
+
+  
+/* =========================================
+   PROJECTS SECTION
+========================================= */
+
+.projectsSection {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 100px 40px;
+}
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.projectsHeader {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.smallTitle {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #38bdf8;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.projectsHeader h2 {
+  margin: 0 0 15px;
+
+  font-size: 42px;
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #818cf8,
+    #c084fc
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.projectsHeader p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.projectsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.projectCard {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 420px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(30, 41, 59, 0.85),
+    rgba(15, 23, 42, 0.95)
+  );
+
+  border: 1px solid rgba(56, 189, 248, 0.16);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.18);
+
+  backdrop-filter: blur(15px);
+
+  animation: cardFadeUp 0.8s ease both;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Background Glow */
+
+.projectCard::before {
+  content: "";
+
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+
+  top: -100px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  filter: blur(100px);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 0.4s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(56, 189, 248, 0.5);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(56, 189, 248, 0.12);
+}
+
+.projectCard:hover::before {
+  opacity: 0.35;
+}
+
+/* =========================================
+   FEATURED PROJECT
+========================================= */
+
+.featuredCard {
+  grid-column: 1 / -1;
+
+  min-height: 350px;
+
+  border: 1px solid rgba(56, 189, 248, 0.5);
+
+  background: linear-gradient(
+    135deg,
+    rgba(14, 165, 233, 0.12),
+    rgba(30, 41, 59, 0.95),
+    rgba(99, 102, 241, 0.12)
+  );
+
+  box-shadow:
+    0 0 35px rgba(56, 189, 248, 0.08);
+}
+
+.featuredCard:hover {
+  border-color: #38bdf8;
+
+  box-shadow:
+    0 0 30px rgba(56, 189, 248, 0.2),
+    0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.featuredBadge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 12px;
+
+  border-radius: 30px;
+
+  background: rgba(56, 189, 248, 0.10);
+
+  border: 1px solid rgba(56, 189, 248, 0.3);
+
+  color: #38bdf8;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.cardTop {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.projectNumber {
+  color: #38bdf8;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.projectIcon {
+  color: rgba(56, 189, 248, 0.55);
+
+  font-size: 26px;
+}
+
+/* =========================================
+   PROJECT INFORMATION
+========================================= */
+
+.projectInfo {
+  position: relative;
+  z-index: 1;
+}
+
+.projectInfo h3 {
+  margin: 0 0 8px;
+
+  color: #f8fafc;
+
+  font-size: 23px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.featuredCard .projectInfo h3 {
+  font-size: 30px;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+
+  color: #38bdf8;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.description {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   TECHNOLOGIES SECTION
+========================================= */
+
+.technologiesSection {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 28px;
+}
+
+.technologiesTitle {
+  margin-bottom: 12px;
+
+  color: #cbd5e1;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.technologiesList {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+/* Individual Technology */
+
+.technologyBadge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 13px;
+
+  border-radius: 10px;
+
+  background: rgba(2, 6, 23, 0.6);
+
+  border: 1px solid rgba(148, 163, 184, 0.16);
+
+  color: #cbd5e1;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.technologyIcon {
+  flex-shrink: 0;
+
+  color: #38bdf8;
+
+  font-size: 19px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.technologyBadge:hover {
+  transform: translateY(-4px);
+
+  color: #ffffff;
+
+  border-color: rgba(56, 189, 248, 0.5);
+
+  box-shadow:
+    0 0 15px rgba(56, 189, 248, 0.12);
+}
+
+.technologyBadge:hover .technologyIcon {
+  transform: scale(1.2);
+
+  color: #818cf8;
+}
+
+/* =========================================
+   PROJECT ACTION BUTTONS
+========================================= */
+
+.projectActions {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: auto;
+
+  padding-top: 28px;
+}
+
+.projectActions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-width: 125px;
+
+  padding: 12px 20px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* GitHub Button */
+
+.githubButton {
+  color: #ffffff;
+
+  background: rgba(30, 41, 59, 0.9);
+
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* Live Demo Button */
+
+.demoButton {
+  color: #ffffff;
+
+  background: linear-gradient(
+    90deg,
+    #0284c7,
+    #4f46e5
+  );
+
+  border: 1px solid transparent;
+}
+
+.projectActions a:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 18px rgba(56, 189, 248, 0.3);
+}
+
+/* =========================================
+   CARD ANIMATIONS
+========================================= */
+
+.projectCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.projectCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.projectCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.projectCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.projectCard:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .projectsSection {
+    padding: 80px 24px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredCard {
+    grid-column: auto;
+  }
+
+  .projectCard {
+    min-height: auto;
+  }
+
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .projectsSection {
+    padding: 75px 16px;
+  }
+
+  .projectsHeader {
+    margin-bottom: 35px;
+  }
+
+  .projectsHeader h2 {
+    font-size: 31px;
+  }
+
+  .projectsHeader p {
+    font-size: 14px;
+  }
+
+  .projectCard {
+    padding: 24px 20px;
+
+    border-radius: 16px;
+  }
+
+  .featuredCard .projectInfo h3 {
+    font-size: 24px;
+  }
+
+  .projectInfo h3 {
+    font-size: 21px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .featuredBadge {
+    font-size: 10px;
+  }
+
+  .technologyBadge {
+    padding: 8px 10px;
+
+    font-size: 12px;
+  }
+
+  .projectActions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .projectActions a {
+    width: 100%;
+  }
+
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .projectCard {
+    animation: none;
+    transition: none;
+  }
+
+  .projectActions a,
+  .technologyBadge,
+  .technologyIcon {
+    transition: none;
+  }
+
+}
+
 }
