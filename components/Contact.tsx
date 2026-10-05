@@ -64,7 +64,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/Malsha Prabhasara"
+              href="https://www.linkedin.com/in/malsha-prabhasara-0468a83ab?utm_source=share_via&utm_content=profile&utm_medium=member_android"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link-card"

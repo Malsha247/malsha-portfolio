@@ -59,7 +59,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com/in/Malsha Prabhasara"
+                href="https://www.linkedin.com/in/malsha-prabhasara-0468a83ab?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
