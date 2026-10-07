@@ -14,11 +14,18 @@ const education = [
   },
 
   {
-    qualification: "Add Your Qualification Here",
+    qualification: "Diploma in IT & English",
     institute: "ESoft Metro Campus",
-    period: "Add Year / Period",
+    period: "2020 - 2021",
     description:
-      "Add a short description about your qualification, subjects, or academic experience here.",
+      "Completed a diploma in Information Technology and English, gaining foundational knowledge in both technical and communication skills.",
+  },
+  {
+    qualification: "Diploma in Human Resource Management",
+    institute: "IMBS Campus",
+    period: "Present - 2026",
+    description:
+      "Completed a diploma in Human Resource Management, gaining foundational knowledge in personnel management, labor relations, and organizational behavior.",
   },
 ];
 

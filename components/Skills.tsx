@@ -15,12 +15,22 @@ import {
   SiPostman,
 } from "react-icons/si";
 
-import { FaJava, FaCode, FaTools } from "react-icons/fa";
+import {
+  FaJava,
+  FaCode,
+  FaTools,
+  FaFileWord,
+  FaFileExcel,
+  FaFilePowerpoint,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const skillGroups = [
   {
     title: "Frontend Development",
-    description: "Technologies I use for building modern user interfaces.",
+    description:
+      "Technologies I use for building modern user interfaces.",
+
     skills: [
       { name: "HTML", icon: SiHtml5 },
       { name: "CSS", icon: SiCss },
@@ -33,7 +43,9 @@ const skillGroups = [
 
   {
     title: "Backend & Database",
-    description: "Backend technologies and databases I have worked with.",
+    description:
+      "Backend technologies and databases I have worked with.",
+
     skills: [
       { name: "PHP", icon: SiPhp },
       { name: "MySQL", icon: SiMysql },
@@ -44,7 +56,9 @@ const skillGroups = [
 
   {
     title: "Programming Languages",
-    description: "Programming languages I have experience working with.",
+    description:
+      "Programming languages I have experience working with.",
+
     skills: [
       { name: "Java", icon: FaJava },
       { name: "Python", icon: SiPython },
@@ -54,7 +68,9 @@ const skillGroups = [
 
   {
     title: "QA & Development Tools",
-    description: "Tools I use for testing, version control and development.",
+    description:
+      "Tools I use for testing, version control and development.",
+
     skills: [
       { name: "Playwright", icon: FaTools },
       { name: "Postman", icon: SiPostman },
@@ -62,48 +78,120 @@ const skillGroups = [
       { name: "GitHub", icon: SiGithub },
     ],
   },
+
+  {
+    title: "Microsoft Office",
+    description:
+      "Productivity tools I use for documentation, data analysis and presentations.",
+
+    skills: [
+      {
+        name: "Microsoft Word",
+        icon: FaFileWord,
+      },
+      {
+        name: "Microsoft Excel",
+        icon: FaFileExcel,
+      },
+      {
+        name: "Microsoft PowerPoint",
+        icon: FaFilePowerpoint,
+      },
+      {
+        name: "Microsoft Outlook",
+        icon: FaEnvelope,
+      },
+    ],
+  },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="skills-section">
-      <div className="skills-header">
-        <span className="skills-small-title">MY SKILLS</span>
+    <section
+      id="skills"
+      className="skills-section"
+    >
+      {/* Heading */}
 
-        <h2>Technologies & Tools</h2>
+      <div className="skills-header">
+
+        <span className="skills-small-title">
+          MY SKILLS
+        </span>
+
+        <h2>
+          Technologies & Tools
+        </h2>
 
         <p>
-          Technologies, programming languages and tools I use for development
-          and software quality assurance.
+          Technologies, programming languages,
+          development tools, QA tools and productivity
+          software I use in my work.
         </p>
+
       </div>
 
-      <div className="skills-grid">
-        {skillGroups.map((group) => (
-          <div className="skill-category-card" key={group.title}>
-            <div className="skill-category-header">
-              <h3>{group.title}</h3>
+      {/* Skill Categories */}
 
-              <p>{group.description}</p>
+      <div className="skills-grid">
+
+        {skillGroups.map((group) => (
+
+          <div
+            className="skill-category-card"
+            key={group.title}
+          >
+
+            {/* Category Heading */}
+
+            <div className="skill-category-header">
+
+              <h3>
+                {group.title}
+              </h3>
+
+              <p>
+                {group.description}
+              </p>
+
             </div>
 
+            {/* Skills */}
+
             <div className="skills-list">
+
               {group.skills.map((skill) => {
+
                 const Icon = skill.icon;
 
                 return (
-                  <div className="skill-item" key={skill.name}>
+                  <div
+                    className="skill-item"
+                    key={skill.name}
+                  >
+
                     <div className="skill-icon-wrapper">
-                      <Icon className="skill-icon" />
+
+                      <Icon
+                        className="skill-icon"
+                      />
+
                     </div>
 
-                    <span>{skill.name}</span>
+                    <span>
+                      {skill.name}
+                    </span>
+
                   </div>
                 );
               })}
+
             </div>
+
           </div>
+
         ))}
+
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import {
   FaLinkedinIn,
   FaGithub,
   FaPaperPlane,
+  FaPhoneAlt,
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -16,7 +17,7 @@ export default function Contact() {
           <h2>Contact Me</h2>
 
           <p>
-            Iam open to software development, QA, internship, and
+            I am open to software development, QA, internship, and
             collaboration opportunities. Feel free to connect with me.
           </p>
         </div>
@@ -33,7 +34,7 @@ export default function Contact() {
             </h3>
 
             <p>
-              You can reach me through email, LinkedIn, or GitHub.
+              You can reach me through phone, email, LinkedIn, or GitHub.
               I&apos;ll be happy to connect and discuss your idea.
             </p>
 
@@ -42,12 +43,30 @@ export default function Contact() {
               className="contact-main-button"
             >
               <FaPaperPlane />
-
               Send me an Email
             </a>
           </div>
 
           <div className="contact-links">
+
+            {/* PHONE */}
+
+            <a
+              href="tel:+94XXXXXXXXX"
+              className="contact-link-card"
+            >
+              <div className="contact-icon">
+                <FaPhoneAlt />
+              </div>
+
+              <div>
+                <span>Phone</span>
+                <p>+94 77 032 6787</p>
+              </div>
+            </a>
+
+
+            {/* EMAIL */}
 
             <a
               href="mailto:malsha.prebhasara2001@gmail.com"
@@ -63,8 +82,11 @@ export default function Contact() {
               </div>
             </a>
 
+
+            {/* LINKEDIN */}
+
             <a
-              href="https://www.linkedin.com/in/malsha-prabhasara-0468a83ab?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              href="https://www.linkedin.com/in/malsha-prabhasara-0468a83ab"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link-card"
@@ -78,6 +100,9 @@ export default function Contact() {
                 <p>Connect with me</p>
               </div>
             </a>
+
+
+            {/* GITHUB */}
 
             <a
               href="https://github.com/Malsha247"
