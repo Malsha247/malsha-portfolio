@@ -7,71 +7,81 @@ export default function IntroLoader() {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
+    const oldOverflow = document.body.style.overflow;
 
     document.body.style.overflow = "hidden";
 
-    // Keep the intro visible for a little longer.
     const fadeTimer = window.setTimeout(() => {
       setFadeOut(true);
-    }, 3000);
+    }, 2600);
 
-    // Remove it after the fade-out animation finishes.
     const closeTimer = window.setTimeout(() => {
       setLoading(false);
-      document.body.style.overflow = previousOverflow;
-    }, 3550);
+      document.body.style.overflow = oldOverflow;
+    }, 3100);
 
     return () => {
-      window.clearTimeout(fadeTimer);
-      window.clearTimeout(closeTimer);
+      clearTimeout(fadeTimer);
+      clearTimeout(closeTimer);
 
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflow = oldOverflow;
     };
   }, []);
 
-  if (!loading) {
-    return null;
-  }
+  if (!loading) return null;
 
   return (
     <div
-      className={`intro-loader ${
-        fadeOut ? "intro-loader-hide" : ""
+      className={`portfolio-loader ${
+        fadeOut ? "portfolio-loader-hide" : ""
       }`}
-      aria-label="Loading portfolio"
-      aria-live="polite"
     >
-      <div className="intro-loader-glow intro-glow-one" />
-      <div className="intro-loader-glow intro-glow-two" />
+      <div className="loader-bg-glow loader-bg-one" />
+      <div className="loader-bg-glow loader-bg-two" />
 
-      <div className="intro-loader-content">
-        <div className="intro-code-icon" aria-hidden="true">
-          <span>&lt;</span>
-          <strong>M</strong>
-          <span>/&gt;</span>
+      <div className="portfolio-loader-content">
+
+        <div className="loader-animation">
+          <div className="loader-ring ring-one" />
+          <div className="loader-ring ring-two" />
+
+          <div className="loader-orbit">
+            <span className="orbit-dot dot-one" />
+            <span className="orbit-dot dot-two" />
+            <span className="orbit-dot dot-three" />
+          </div>
+
+          <div className="loader-center">
+            <span>&lt;</span>
+            <strong>M</strong>
+            <span>/&gt;</span>
+          </div>
         </div>
 
-        <h1>Malsha</h1>
+        <h2>Malsha Prabhasara</h2>
 
-        <p className="intro-role">
+        <p className="loader-role">
           Software Developer
           <span>•</span>
           QA Engineer
         </p>
 
-        <div className="intro-progress" aria-hidden="true">
-          <div className="intro-progress-bar" />
+        <div className="loader-status">
+          <span className="loader-status-dot" />
+
+          <span>Initializing Portfolio</span>
+
+          <span className="loader-text-dots">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+          </span>
         </div>
 
-        <p className="intro-loading-text">
-          Loading Portfolio
-          <span className="intro-dots" aria-hidden="true">
-            <span>.</span>
-            <span>.</span>
-            <span>.</span>
-          </span>
-        </p>
+        <div className="loader-line">
+          <div className="loader-line-progress" />
+        </div>
+
       </div>
     </div>
   );
