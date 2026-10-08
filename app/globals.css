@@ -2659,6 +2659,61 @@ section h2 {
   }
 }
 
+
+
+/* ==================================================
+   PROJECT CARD BACKWARD COMPATIBILITY
+   Keeps the old Projects.tsx layout looking correct
+   while still supporting the newer image-card layout.
+================================================== */
+
+.portfolio-project-card:not(:has(.project-image-wrapper)) {
+  min-height: 450px;
+
+  padding: 30px;
+}
+
+.portfolio-project-card:not(:has(.project-image-wrapper)) .project-card-top {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.portfolio-project-card:not(:has(.project-image-wrapper)) .project-index {
+  color: var(--primary);
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.portfolio-project-card:not(:has(.project-image-wrapper)) .project-main-icon {
+  color: rgba(56, 189, 248, 0.45);
+
+  font-size: 26px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-project-card:not(:has(.project-image-wrapper)) {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-project-card:not(:has(.project-image-wrapper)) {
+    padding: 24px 20px !important;
+  }
+}
+
+
 /* ==================================================
 
    10. CONTACT
