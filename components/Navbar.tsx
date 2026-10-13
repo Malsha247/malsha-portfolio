@@ -1,24 +1,93 @@
+"use client";
+
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="navbar-wrapper">
       <nav className="navbar">
-        <a href="#home" className="navbar-logo">
-          Malsha Prabhasara
+
+        {/* Logo */}
+        <a
+          href="#home"
+          className="navbar-logo"
+          onClick={closeMenu}
+        >
+          &lt;Malsha<span>.</span>dev /&gt;
         </a>
 
-        <div className="navbar-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
-          
+        {/* Desktop / Mobile Links */}
+        <div
+          className={`navbar-links ${
+            menuOpen ? "navbar-links-open" : ""
+          }`}
+        >
+          <a href="#home" onClick={closeMenu}>
+            Home
+          </a>
+
+          <a href="#about" onClick={closeMenu}>
+            About
+          </a>
+
+          <a href="#education" onClick={closeMenu}>
+            Education
+          </a>
+
+          <a href="#skills" onClick={closeMenu}>
+            Skills
+          </a>
+
+          <a href="#projects" onClick={closeMenu}>
+            Projects
+          </a>
+
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
+
+          {/* Mobile Contact Button */}
+          <a
+            href="#contact"
+            onClick={closeMenu}
+            className="navbar-mobile-contact"
+          >
+            Let&apos;s Talk
+          </a>
         </div>
 
-        <a href="#contact" className="navbar-contact">
-          Let s Talk
+        {/* Desktop Contact */}
+        <a
+          href="#contact"
+          className="navbar-contact"
+        >
+          Let&apos;s Talk
         </a>
+
+        {/* Hamburger Button */}
+        <button
+          type="button"
+          className={`navbar-menu-button ${
+            menuOpen ? "navbar-menu-active" : ""
+          }`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={
+            menuOpen
+              ? "Close navigation menu"
+              : "Open navigation menu"
+          }
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
       </nav>
     </header>
   );

@@ -7435,3 +7435,327 @@ body.portfolio-ready #home .hero-scroll-cue {
     animation: none !important;
   }
 }
+
+
+/* ==================================================
+
+   26. MOBILE HAMBURGER NAVIGATION
+
+================================================== */
+
+/* Hidden on desktop */
+
+.navbar-menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 10px;
+
+  color: #cbd5e1;
+
+  font-size: 20px;
+
+  background: rgba(15, 23, 42, 0.78);
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-menu-button:hover {
+  color: #ffffff;
+
+  border-color: rgba(56, 189, 248, 0.5);
+
+  background: rgba(56, 189, 248, 0.08);
+
+  box-shadow:
+    0 0 16px rgba(56, 189, 248, 0.12);
+}
+
+.navbar-menu-button:focus-visible {
+  outline: 2px solid rgba(56, 189, 248, 0.8);
+  outline-offset: 3px;
+}
+
+.navbar-menu-active {
+  color: #38bdf8;
+
+  transform: rotate(90deg);
+}
+
+.navbar-mobile-contact {
+  display: none;
+}
+
+
+/* ==================================================
+   MOBILE NAVBAR
+================================================== */
+
+@media (max-width: 768px) {
+
+  .navbar-wrapper {
+    padding: 12px 16px;
+  }
+
+  .navbar {
+    position: relative;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    border-radius: 14px;
+  }
+
+  .navbar-logo {
+    flex-shrink: 0;
+
+    font-size: 18px;
+  }
+
+  .navbar-menu-button {
+    display: flex;
+  }
+
+  .navbar-contact {
+    display: none;
+  }
+
+
+  /* Dropdown menu */
+
+  .navbar-links {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 6px;
+
+    padding: 14px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(56, 189, 248, 0.16);
+    border-radius: 14px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(15, 23, 42, 0.97),
+        rgba(2, 6, 23, 0.98)
+      );
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+      0 20px 45px rgba(0, 0, 0, 0.35),
+      0 0 25px rgba(56, 189, 248, 0.05);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+      translateY(-12px)
+      scale(0.97);
+
+    transform-origin: top center;
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .navbar-links-open {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+
+  /* Menu links */
+
+  .navbar-links a {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 11px 14px;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-align: left;
+
+    background: transparent;
+
+    transition:
+      color 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .navbar-links a::after {
+    display: none;
+  }
+
+  .navbar-links a:hover {
+    color: #ffffff;
+
+    background: rgba(56, 189, 248, 0.08);
+
+    border-color: rgba(56, 189, 248, 0.12);
+
+    transform: translateX(4px);
+  }
+
+
+  /* Mobile Let's Talk button */
+
+  .navbar-mobile-contact {
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 6px;
+
+    color: #ffffff !important;
+
+    font-weight: 700 !important;
+
+    background:
+      linear-gradient(
+        90deg,
+        #0284c7,
+        #4f46e5
+      ) !important;
+
+    border-color: transparent !important;
+
+    box-shadow:
+      0 0 14px rgba(56, 189, 248, 0.12);
+  }
+
+  .navbar-mobile-contact:hover {
+    transform: translateY(-2px) !important;
+
+    background:
+      linear-gradient(
+        90deg,
+        #0369a1,
+        #4338ca
+      ) !important;
+
+    box-shadow:
+      0 0 20px rgba(56, 189, 248, 0.20);
+  }
+}
+
+
+/* ==================================================
+   SMALL MOBILE NAVBAR
+================================================== */
+
+@media (max-width: 420px) {
+
+  .navbar-wrapper {
+    padding:
+      10px 12px;
+  }
+
+  .navbar {
+    padding:
+      10px 12px;
+  }
+
+  .navbar-logo {
+    font-size: 16px;
+
+    letter-spacing: 0.6px;
+  }
+
+  .navbar-menu-button {
+    width: 39px;
+    height: 39px;
+
+    font-size: 18px;
+  }
+
+  .navbar-links {
+    padding: 12px;
+
+    gap: 5px;
+  }
+
+  .navbar-links a {
+    padding:
+      10px 12px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* ==================================================
+   HAMBURGER REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar-menu-button,
+  .navbar-links,
+  .navbar-links a,
+  .navbar-mobile-contact {
+    transition: none !important;
+  }
+
+  .navbar-menu-active {
+    transform: none;
+  }
+}
