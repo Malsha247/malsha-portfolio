@@ -20,7 +20,7 @@ export default function Navbar() {
           className="navbar-logo"
           onClick={closeMenu}
         >
-          &lt;Malsha<span>.</span>dev /&gt;
+          Malsha<span> </span>Prabhasara
         </a>
 
         {/* Desktop / Mobile Links */}
