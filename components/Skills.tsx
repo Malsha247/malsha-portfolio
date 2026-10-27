@@ -124,9 +124,8 @@ export default function Skills() {
         </h2>
 
         <p>
-          Technologies, programming languages,
-          development tools, QA tools and productivity
-          software I use in my work.
+          The technologies, programming languages, QA tools, and productivity
+          software I use to design, build, and improve digital products.
         </p>
 
       </div>

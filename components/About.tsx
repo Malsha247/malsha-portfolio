@@ -34,18 +34,18 @@ export default function About() {
         <p>
           I&apos;m Malsha Prabhasara, a Bachelor of Information Technology student
           at the University of Moratuwa. I enjoy turning ideas into useful,
-          clear, and easy-to-use digital products.
+          accessible, and easy-to-use digital products.
         </p>
         <p>
           My interests include web development, frontend design, backend
-          systems, and software quality assurance. I like learning new tools,
-          solving problems, and checking that applications work as expected.
+          systems, and software quality assurance. I enjoy learning new tools,
+          solving practical problems, and making sure applications work as expected.
         </p>
 
         <div className="about-contact-line">
           <strong>Contact</strong>
-          <a href="mailto:malsha.prebhasara2001@gmail.com">
-            malsha.prebhasara2001@gmail.com
+          <a href="mailto:malsha.prabhasara2001@gmail.com">
+            malsha.prabhasara2001@gmail.com
           </a>
         </div>
 

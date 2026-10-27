@@ -25,7 +25,7 @@ const education = [
     institute: "IMBS Campus",
     period: "Present - 2026",
     description:
-      "Completed a diploma in Human Resource Management, gaining foundational knowledge in personnel management, labor relations, and organizational behavior.",
+      "Currently completing a diploma in Human Resource Management, with a focus on personnel management, labor relations, and organizational behavior.",
   },
 ];
 

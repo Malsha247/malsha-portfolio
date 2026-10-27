@@ -30,9 +30,9 @@ export default function Hero() {
           </h2>
 
           <p className="hero-description">
-            I&apos;m Malsha Prabhasara, a BIT student who enjoys building modern
-            web applications and testing software to create reliable,
-            user-friendly digital experiences.
+            I&apos;m Malsha Prabhasara, a BIT student who builds modern web
+            applications and tests software to create reliable, user-friendly
+            digital experiences.
           </p>
 
           <div className="hero-tech-strip" aria-label="Main skills">

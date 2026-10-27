@@ -5,12 +5,16 @@ import { useEffect, useState } from "react";
 export default function IntroLoader() {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+  const [progress, setProgress] = useState(1);
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     document.body.classList.remove("portfolio-ready");
 
+    const progressTimer = window.setInterval(() => {
+      setProgress((current) => Math.min(current + 1, 100));
+    }, 26);
     const fadeTimer = window.setTimeout(() => setFadeOut(true), 2600);
     const closeTimer = window.setTimeout(() => {
       setLoading(false);
@@ -21,6 +25,7 @@ export default function IntroLoader() {
     return () => {
       window.clearTimeout(fadeTimer);
       window.clearTimeout(closeTimer);
+      window.clearInterval(progressTimer);
       document.body.style.overflow = previousOverflow;
     };
   }, []);
@@ -47,10 +52,13 @@ export default function IntroLoader() {
           Software Developer <span>•</span> QA Engineer
         </p>
         <div className="intro-progress" aria-hidden="true">
-          <div className="intro-progress-bar" />
+          <div
+            className="intro-progress-bar"
+            style={{ transform: `scaleX(${progress / 100})` }}
+          />
         </div>
         <p className="intro-loading-text">
-          Loading Portfolio
+          Loading Portfolio <span className="intro-percentage">{progress}%</span>
           <span className="intro-dots" aria-hidden="true">
             <span>.</span><span>.</span><span>.</span>
           </span>

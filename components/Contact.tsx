@@ -17,8 +17,8 @@ export default function Contact() {
           <h2>Contact Me</h2>
 
           <p>
-            I am open to software development, QA, internship, and
-            collaboration opportunities. Feel free to connect with me.
+            I&apos;m open to software development, QA, internship, and
+            collaboration opportunities. Feel free to get in touch.
           </p>
         </div>
 
@@ -34,12 +34,12 @@ export default function Contact() {
             </h3>
 
             <p>
-              You can reach me through phone, email, LinkedIn, or GitHub.
-              I&apos;ll be happy to connect and discuss your idea.
+              You can reach me by phone, email, LinkedIn, or GitHub. I&apos;d be
+              happy to connect and discuss your idea.
             </p>
 
             <a
-              href="mailto:malsha.prebhasara2001@gmail.com"
+              href="mailto:malsha.prabhasara2001@gmail.com"
               className="contact-main-button"
             >
               <FaPaperPlane />
@@ -69,7 +69,7 @@ export default function Contact() {
             {/* EMAIL */}
 
             <a
-              href="mailto:malsha.prebhasara2001@gmail.com"
+              href="mailto:malsha.prabhasara2001@gmail.com"
               className="contact-link-card"
             >
               <div className="contact-icon">
@@ -78,7 +78,7 @@ export default function Contact() {
 
               <div>
                 <span>Email</span>
-                <p>malsha.prebhasara2001@gmail.com</p>
+                <p>malsha.prabhasara2001@gmail.com</p>
               </div>
             </a>
 
