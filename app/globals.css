@@ -8351,7 +8351,7 @@ body {
   #home.hero-section {
     min-height: auto;
     padding: 120px 6% 58px;
-    background: linear-gradient(180deg, #171a20 0%, #171a20 60%, #2bd985 60%, #2bd985 100%);
+    background: linear-gradient(180deg, #171a20 0%, #1d252b 100%);
   }
   #home.hero-section::after { top: auto; right: -100px; bottom: -50px; width: 340px; height: 340px; }
   #home .hero-content { grid-template-columns: 1fr; gap: 25px; }
