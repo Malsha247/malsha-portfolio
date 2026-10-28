@@ -8,6 +8,17 @@ import "./globals.css";
 import IntroLoader from "@/components/IntroLoader";
 import { siteUrl } from "./siteConfig";
 
+const themeInitScript = `
+  try {
+    const theme = window.localStorage.getItem("malsha-portfolio-theme");
+    if (theme === "light" || theme === "dark") {
+      document.documentElement.dataset.theme = theme;
+    }
+  } catch (error) {
+    console.error("Could not read the saved color theme.", error);
+  }
+`;
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -73,7 +84,11 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className={`${geistSans.className} min-h-screen`}>
         <IntroLoader />
 

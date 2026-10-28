@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -74,6 +75,8 @@ export default function Navbar() {
         >
           Let&apos;s Talk
         </a>
+
+        <ThemeToggle />
 
         {/* Hamburger Button */}
         <button
