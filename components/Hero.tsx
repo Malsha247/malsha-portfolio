@@ -39,7 +39,7 @@ export default function Hero() {
             <span>Next.js</span>
             <span>React</span>
             <span>TypeScript</span>
-            <span>Selenium</span>
+            <span>Playwright</span>
           </div>
 
           <div className="hero-buttons">
