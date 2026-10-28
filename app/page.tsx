@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/footer";
 import Education from "@/components/Education";
+import Experience from "@/components/Experience";
 import { siteUrl } from "./siteConfig";
 
 const structuredData = {
@@ -61,6 +62,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <Education />
+        <Experience />
         <Contact />
 
         <Footer />

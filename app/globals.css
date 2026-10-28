@@ -1402,6 +1402,21 @@ section h2 {
   animation-delay: 0.4s;
 }
 
+.experience-section {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px 40px 90px;
+}
+
+.experience-section .education-container::before {
+  display: none;
+}
+
+.experience-card {
+  grid-template-columns: 58px minmax(0, 1fr);
+}
+
 
 /* Number */
 
@@ -1553,6 +1568,10 @@ section h2 {
     padding: 80px 24px;
   }
 
+  .experience-section {
+    padding: 20px 24px 75px;
+  }
+
   .education-header {
     margin-bottom: 40px;
   }
@@ -1590,6 +1609,10 @@ section h2 {
     padding: 75px 16px;
   }
 
+  .experience-section {
+    padding: 15px 16px 65px;
+  }
+
   .education-header > span {
     font-size: 11px;
 
@@ -1608,6 +1631,10 @@ section h2 {
     padding: 23px 18px;
 
     border-radius: 17px;
+  }
+
+  .experience-card {
+    grid-template-columns: 1fr;
   }
 
   .education-icon {
@@ -8376,7 +8403,7 @@ body {
   .services-section { padding: 35px 6% 70px; }
   .services-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 0; }
-  .education-section, .skills-section, .projects-section, .contact-section { padding-left: 6%; padding-right: 6%; }
+  .education-section, .experience-section, .skills-section, .projects-section, .contact-section { padding-left: 6%; padding-right: 6%; }
 }
 @media (max-width: 560px) {
   #home.hero-section { padding-top: 108px; }

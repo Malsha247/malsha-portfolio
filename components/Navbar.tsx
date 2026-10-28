@@ -41,6 +41,10 @@ export default function Navbar() {
             Education
           </a>
 
+          <a href="#experience" onClick={closeMenu}>
+            Experience
+          </a>
+
           <a href="#skills" onClick={closeMenu}>
             Skills
           </a>

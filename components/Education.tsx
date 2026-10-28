@@ -27,6 +27,13 @@ const education = [
     description:
       "Currently completing a diploma in Human Resource Management, with a focus on personnel management, labor relations, and organizational behavior.",
   },
+  {
+    qualification: "G.C.E. Advanced Level - Technology Stream",
+    institute: "Mahanama Central College, Monaragala",
+    period: "2020",
+    description:
+      "Results: Engineering Technology - C, IT - S, and Science for Technology - S.",
+  },
 ];
 
 export default function Education() {
