@@ -84,8 +84,8 @@ const projects = [
       },
     ],
 
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Malsha247/Final_Project-",
+    demo: "https://final-project-8c7g.vercel.app/",
   },
 
   // PROJECT 03 - STUDENT MANAGEMENT SYSTEM
