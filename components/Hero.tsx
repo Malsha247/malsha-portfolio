@@ -46,7 +46,7 @@ export default function Hero() {
             <a href="#projects">
               View Projects <span aria-hidden="true">→</span>
             </a>
-            <a href="/Malsha Resume" download>
+            <a href="/Malsha%20Resume.pdf" download="Malsha-Resume.pdf">
               Download CV <span aria-hidden="true">↓</span>
             </a>
           </div>

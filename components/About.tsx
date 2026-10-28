@@ -51,7 +51,9 @@ export default function About() {
 
         <div className="about-actions">
           <a href="#contact">More about me <FaArrowRight aria-hidden="true" /></a>
-          <a href="/cv.pdf" download>Download CV <FaDownload aria-hidden="true" /></a>
+          <a href="/Malsha%20Resume.pdf" download="Malsha-Resume.pdf">
+            Download CV <FaDownload aria-hidden="true" />
+          </a>
         </div>
       </div>
     </section>
